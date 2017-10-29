@@ -1,0 +1,25 @@
+<div  [ngClass]="{hidden: isNavbarHidden}">
+  <mat-toolbar color="primary">
+    <span class="toolbar-item">
+      <button mat-button routerLink="home" id="logo">
+        <img class="bes" [src]="getLogoLink()">
+      </button>
+      <button mat-button [routerLinkActive]="['active']" [routerLink]="['home']">
+        Home
+      </button>
+      <button mat-button [routerLinkActive]="['active']" [routerLink]="['skill-catalog']">
+        Skill Catalog
+      </button>
+      <button mat-button [routerLinkActive]="['active']" [routerLink]="['explore']">
+        Explore
+      </button>
+    </span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <button mat-icon-button>
+      <mat-icon>notifications</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
